@@ -49,21 +49,14 @@
     <div class="container mt-5">
         <h2 class="text-center">Confirm Your Details</h2>
         <div class="details-group">
-            <strong>Full Name:</strong> <span id="fullName"></span>
-        </div>
-        <div class="details-group">
-            <strong>Identification Number:</strong> <span id="idNumber"></span>
-        </div>
-        <div class="details-group">
-            <strong>Mobile Number:</strong> <span id="mobileNumber"></span>
+            <strong>Amount: $</strong> <span id="fullName"></span>
         </div>
         <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Confirm and Submit</button>
     </div>
 
     <script>
-        document.getElementById('fullName').innerText = localStorage.getItem('fullName');
-        document.getElementById('idNumber').innerText = localStorage.getItem('idNumber');
-        document.getElementById('mobileNumber').innerText = localStorage.getItem('mobileNumber');
+        document.getElementById('amount').innerText = localStorage.getItem('amount');
+       
 
         function submitForm() {
 

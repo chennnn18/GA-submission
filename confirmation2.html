@@ -52,18 +52,18 @@
             <strong>Full Name:</strong> <span id="fullName"></span>
         </div>
         <div class="details-group">
-            <strong>Identification Number:</strong> <span id="idNumber"></span>
+            <strong>Account number:</strong> <span id="accnum"></span>
         </div>
         <div class="details-group">
-            <strong>Mobile Number:</strong> <span id="mobileNumber"></span>
+            <strong>Bank:</strong> <span id="banks"></span>
         </div>
         <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Confirm and Submit</button>
     </div>
 
     <script>
         document.getElementById('fullName').innerText = localStorage.getItem('fullName');
-        document.getElementById('idNumber').innerText = localStorage.getItem('idNumber');
-        document.getElementById('mobileNumber').innerText = localStorage.getItem('mobileNumber');
+        document.getElementById('accnum').innerText = localStorage.getItem('accnum');
+        document.getElementById('banks').innerText = localStorage.getItem('banks');
 
         function submitForm() {
 
