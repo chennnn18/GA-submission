@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Payment Options</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .card-content img {
+            margin-right: 20px;
+            max-width: 150px;
+            border-radius: 10px;
+        }
+
+        .card-text {
+            flex: 1;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <img src="paynow.png" alt="PayNow">
+                <div class="card-text">
+                    <h2><a href="paynow.html">PayNow</a></h2>
+                    <p>
+                        Participating Banks:
+                        <br><br>
+                        Bank of China, Citibank Singapore Limited, DBS Bank/POSB, HSBC, Industrial and Commercial Bank of China Ltd, Maybank, OCBC Bank, Standard Chartered Bank, and UOB.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="https://www.shutterstock.com/image-vector/bank-transfer-icon-vector-logotype-600nw-2144565823.jpg" alt="Bank Transfer">
+                <div class="card-text">
+                    <h2>Bank Transfer</h2>
+                    <p>
+                        Participating Banks:
+                        <br><br>
+                        UOB, POSB, DBS, OCBC, Maybank, CIMB, Trust
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="ewallet.png" alt="E-wallet" style="max-width: 150px;">
+                <div class="card-text">
+                    <h2>E-wallet</h2>
+                    <p>(We will incur admin fees)</p>
+                    <p>
+                        GIRO payments, bank transfer, credit/debit cards
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
