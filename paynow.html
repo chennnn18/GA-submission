@@ -46,6 +46,10 @@
         <h2 class="text-center">Enter Your Details</h2>
         <form id="detailsForm">
             <div class="form-group mb-3">
+                <label for="amountpaynow">Amount: $</label>
+                <input type="number" class="form-control" id="amountpaynow" required>
+            </div>
+            <div class="form-group mb-3">
                 <label for="fullName">Full Name</label>
                 <input type="text" class="form-control" id="fullName" required>
             </div>
@@ -63,11 +67,13 @@
 
     <script>
         function submitDetails() {
+            const amountpaynow = document.getElementById('amountpaynow').value;
             const fullName = document.getElementById('fullName').value;
             const idNumber = document.getElementById('idNumber').value;
             const mobileNumber = document.getElementById('mobileNumber').value;
 
             // Store details in localStorage
+            localStorage.setItem('amountpaynow', amountpaynow);
             localStorage.setItem('fullName', fullName);
             localStorage.setItem('idNumber', idNumber);
             localStorage.setItem('mobileNumber', mobileNumber);

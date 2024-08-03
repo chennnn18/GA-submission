@@ -49,6 +49,9 @@
     <div class="container mt-5">
         <h2 class="text-center">Confirm Your Details</h2>
         <div class="details-group">
+            <strong>Amount:</strong> <span id="amountpaynow"></span>
+        </div>
+        <div class="details-group">
             <strong>Full Name:</strong> <span id="fullName"></span>
         </div>
         <div class="details-group">
@@ -61,6 +64,7 @@
     </div>
 
     <script>
+        document.getElementById('amountpaynow').innerText = localStorage.getItem('amountpaynow');
         document.getElementById('fullName').innerText = localStorage.getItem('fullName');
         document.getElementById('idNumber').innerText = localStorage.getItem('idNumber');
         document.getElementById('mobileNumber').innerText = localStorage.getItem('mobileNumber');

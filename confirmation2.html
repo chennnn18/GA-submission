@@ -57,6 +57,9 @@
         <div class="details-group">
             <strong>Bank:</strong> <span id="banks"></span>
         </div>
+        <div class="details-group">
+            <strong>Amount: $</strong> <span id="amountbank"></span>
+        </div>
         <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Confirm and Submit</button>
     </div>
 
@@ -64,6 +67,7 @@
         document.getElementById('fullName').innerText = localStorage.getItem('fullName');
         document.getElementById('accnum').innerText = localStorage.getItem('accnum');
         document.getElementById('banks').innerText = localStorage.getItem('banks');
+        document.getElementById('amountbank').innerText = localStorage.getItem('amountbank');
 
         function submitForm() {
 
