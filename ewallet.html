@@ -5,54 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eWallet</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d3d3d3;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .table thead th {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .transaction-section {
+            margin-top: 50px;
+        }
+        .transaction-section h2 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <h2>eWallet Transfer</h2>
-        <form id="detailsForm">
+        <form id="detailsForm" onsubmit="submitDetails(); return false;">
             <div class="form-group">
                 <label for="amount">Amount to Transfer</label>
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
             </div>
-            <a href="confirmationewallet.html" class="btn btn-primary" >Transfer</a>
+            <button type="submit" class="btn btn-primary">Transfer</button>
         </form>
 
-        <h2 class="mt-5">Previous Transactions</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Transaction ID</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>$100</td>
-                    <td>2023-07-01 12:34:56</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>$200</td>
-                    <td>2023-07-02 13:45:56</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>$300</td>
-                    <td>2023-07-03 14:56:56</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="transaction-section">
+            <h2>Previous Transactions</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Transaction ID</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>$100</td>
+                        <td>2023-07-01 12:34:56</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>$200</td>
+                        <td>2023-07-02 13:45:56</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>$300</td>
+                        <td>2023-07-03 14:56:56</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script>
          function submitDetails() {
             const amount = document.getElementById('amount').value;
-           
 
             // Store details in localStorage
             localStorage.setItem('amount', amount);
-           
 
             // Redirect to confirmation page
             window.location.href = 'confirmationewallet.html';

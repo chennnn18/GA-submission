@@ -9,7 +9,7 @@
     <title>Confirm Details</title>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #d3d3d3;
         }
 
         .container {
@@ -49,13 +49,12 @@
     <div class="container mt-5">
         <h2 class="text-center">Confirm Your Details</h2>
         <div class="details-group">
-            <strong>Amount: $</strong> <span id="fullName"></span>
+            <strong>Amount: $ 500.00</strong> <span id="fullName"></span>
         </div>
         <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Confirm and Submit</button>
     </div>
 
     <script>
-        document.getElementById('amount').innerText = localStorage.getItem('amount');
        
 
         function submitForm() {
